@@ -1,3 +1,63 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  background-color: rgb(178, 184, 189);
+  margin: 0;
+  height: 100vh;
+  position: relative;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px 5px;
+  width: 200px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 4rem;
+  width: 1fr;
+  color: white;
+  overflow: hidden;
+  white-space: wrap;
+}
+.cell, body {
+  transition: 0.15s;
+}
+
+.cell:hover{
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+.disappear {
+  pointer-events: none;
+  opacity: 0;
+
+}
+.center {
+  background: white;
+  color: black;
+  height: 20rem;
+  left: 50%;
+  opacity: 1;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 13rem;
+}
+
+.darken {
+  background-color: rgb(92, 99, 105) ;
+}
+
+
